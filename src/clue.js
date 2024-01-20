@@ -14,7 +14,7 @@ const suspectsArray = [
     color: "green",
   },
   {
-    firstName: " Doctor",
+    firstName: "Doctor",
     lastName: "Orchid",
     occupation: "Scientist",
     age: 26,
@@ -42,9 +42,9 @@ const suspectsArray = [
     color: "red",
   },
   {
-    firstName: " Eleanor",
+    firstName: "Eleanor",
     lastName: "Peacock",
-    occupation: " Socialité",
+    occupation: "Socialité",
     age: 36,
     description:
       "She is from a wealthy family and uses her status and money to earn popularity",
@@ -67,7 +67,7 @@ const suspectsArray = [
 // Rooms Array
 
 const roomsArray = [
-  { name: " Dining Room" },
+  { name: "Dining Room" },
   { name: "Conservatory" },
   { name: "Kitchen" },
   { name: "Study" },
@@ -89,12 +89,12 @@ const roomsArray = [
 const weaponsArray = [
   { name: "rope", weight: 10 },
   { name: "knife", weight: 8 },
-  { name: " candlestick", weight: 2 },
+  { name: "candlestick", weight: 2 },
   { name: "dumbbell", weight: 30 },
   { name: "poison", weight: 2 },
   { name: "axe", weight: 15 },
   { name: "bat", weight: 13 },
-  { name: " trophy", weight: 25 },
+  { name: "trophy", weight: 25 },
   { name: "pistol", weight: 20 },
 ];
 
@@ -120,7 +120,11 @@ function pickMystery() {
     room: randomRoomArr,
   };
   console.log(myObj);
-  return myObj;
+  return {
+    suspect: selectRandom(suspectsArray),
+    weapon: selectRandom(weaponsArray),
+    room: selectRandom(roomsArray)
+  };
 }
 
 // ITERATION 3
